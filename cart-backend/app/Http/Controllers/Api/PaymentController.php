@@ -12,7 +12,7 @@ class PaymentController extends Controller
 {
     public function payStripe(Request $request)
     {
-        Stripe::setApiKey(env('STRIPE_KEY'));
+        Stripe::setApiKey(env('STRIPE_SECRET_KEY'));
 
         try{
             $checkout_session = Session::create([
